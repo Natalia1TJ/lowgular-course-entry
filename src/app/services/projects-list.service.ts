@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {EmployeeModel} from "../model/employee.model";
 import {Observable} from "rxjs";
 import {PersonModel} from "../model/person.model";
 import {ProjectModel} from "../model/project.model";
 
 @Injectable()
-export class EmployeeService {
+export class ProjectsListService {
   constructor(private _httpClient: HttpClient) {
   }
 
-  getAll(): Observable<PersonModel[]> {
-    return this._httpClient.get<PersonModel[]>('assets/data/people.json');
+  getAll(): Observable<ProjectModel[]> {
+    return this._httpClient.get<ProjectModel[]>('assets/data/projects.json');
   }
 }
