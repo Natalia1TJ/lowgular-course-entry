@@ -1500,3 +1500,2278 @@
 	"level": "info",
 	"message": "[API] Response ok: properties/flow"
 }
+[info] [API] Request for flow/create-entity: {
+	"action": "flow/create-entity",
+	"params": {},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "Ma4ok7kKpu",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for flow/create-entity"
+}
+[info] [CLI] Calling Query flow/create-entity: {
+	"funcParams": {},
+	"level": "info",
+	"message": "[CLI] Calling Query flow/create-entity"
+}
+[info] [CLI] Called Query flow/create-entity: {
+	"result": {
+		"context": {
+			"project": {
+				"name": "lowgular-course-entry",
+				"workspaceRoot": "/Users/nataliatrocha/Documents/lowgular-course-entry",
+				"root": "",
+				"sourceRoot": "src",
+				"prefix": "app",
+				"codePathFromWorkspaceRoot": "src/app",
+				"absoluteCodePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app",
+				"absoluteRootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry",
+				"rootRoutingFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/app-routing.module.ts",
+				"type": "App"
+			}
+		},
+		"steps": [
+			{
+				"contextId": "entity",
+				"title": "What do you want to create?",
+				"type": "multi-option",
+				"options": {
+					"App": [
+						{
+							"id": "component",
+							"suffix": "Component",
+							"folder": "ui/$name$",
+							"type": "ANGULAR_COMPONENT",
+							"insideOf": "App",
+							"config": {
+								"stylesExtension": "none",
+								"viewEncapsulation": "Emulated",
+								"selector": "generated",
+								"changeDetectionStrategy": "OnPush"
+							}
+						},
+						{
+							"id": "dataService",
+							"suffix": "Service",
+							"folder": "services",
+							"type": "ANGULAR_SERVICE",
+							"insideOf": "App"
+						},
+						{
+							"id": "model",
+							"suffix": "Model",
+							"folder": "model",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						},
+						{
+							"id": "response",
+							"suffix": "Response",
+							"folder": "services",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						}
+					],
+					"Lib": []
+				},
+				"param": "project.type",
+				"property": "id"
+			},
+			{
+				"contextId": "name",
+				"title": "What is the $entity.id$ name?",
+				"subtitle": "e.g. user",
+				"type": "text-input"
+			},
+			{
+				"conditions": [
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "DATA_STRUCTURE"
+					},
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "OBJECT"
+					}
+				],
+				"contextId": "properties",
+				"title": "What are the $entity.id$ properties?",
+				"subtitle": "Optional: Can be empty... or use csv format e.g. id:number,text:string",
+				"type": "multi-input"
+			}
+		],
+		"request": {
+			"scope": "entity.type",
+			"config": {
+				"LIBRARY": {
+					"url": "library/create",
+					"payload": {
+						"name": "name.value"
+					}
+				},
+				"OBJECT": {
+					"url": "object/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"DATA_STRUCTURE": {
+					"url": "data-structure/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_COMPONENT": {
+					"url": "angular-component/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_DIRECTIVE": {
+					"url": "angular-directive/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_GUARD": {
+					"url": "angular-guard/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_RESOLVER": {
+					"url": "angular-resolver/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_SERVICE": {
+					"url": "angular-service/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ABSTRACTION": {
+					"url": "abstraction/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query flow/create-entity"
+}
+[info] [API] Response ok: flow/create-entity: {
+	"result": {
+		"context": {
+			"project": {
+				"name": "lowgular-course-entry",
+				"workspaceRoot": "/Users/nataliatrocha/Documents/lowgular-course-entry",
+				"root": "",
+				"sourceRoot": "src",
+				"prefix": "app",
+				"codePathFromWorkspaceRoot": "src/app",
+				"absoluteCodePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app",
+				"absoluteRootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry",
+				"rootRoutingFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/app-routing.module.ts",
+				"type": "App"
+			}
+		},
+		"steps": [
+			{
+				"contextId": "entity",
+				"title": "What do you want to create?",
+				"type": "multi-option",
+				"options": {
+					"App": [
+						{
+							"id": "component",
+							"suffix": "Component",
+							"folder": "ui/$name$",
+							"type": "ANGULAR_COMPONENT",
+							"insideOf": "App",
+							"config": {
+								"stylesExtension": "none",
+								"viewEncapsulation": "Emulated",
+								"selector": "generated",
+								"changeDetectionStrategy": "OnPush"
+							}
+						},
+						{
+							"id": "dataService",
+							"suffix": "Service",
+							"folder": "services",
+							"type": "ANGULAR_SERVICE",
+							"insideOf": "App"
+						},
+						{
+							"id": "model",
+							"suffix": "Model",
+							"folder": "model",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						},
+						{
+							"id": "response",
+							"suffix": "Response",
+							"folder": "services",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						}
+					],
+					"Lib": []
+				},
+				"param": "project.type",
+				"property": "id"
+			},
+			{
+				"contextId": "name",
+				"title": "What is the $entity.id$ name?",
+				"subtitle": "e.g. user",
+				"type": "text-input"
+			},
+			{
+				"conditions": [
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "DATA_STRUCTURE"
+					},
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "OBJECT"
+					}
+				],
+				"contextId": "properties",
+				"title": "What are the $entity.id$ properties?",
+				"subtitle": "Optional: Can be empty... or use csv format e.g. id:number,text:string",
+				"type": "multi-input"
+			}
+		],
+		"request": {
+			"scope": "entity.type",
+			"config": {
+				"LIBRARY": {
+					"url": "library/create",
+					"payload": {
+						"name": "name.value"
+					}
+				},
+				"OBJECT": {
+					"url": "object/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"DATA_STRUCTURE": {
+					"url": "data-structure/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_COMPONENT": {
+					"url": "angular-component/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_DIRECTIVE": {
+					"url": "angular-directive/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_GUARD": {
+					"url": "angular-guard/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_RESOLVER": {
+					"url": "angular-resolver/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_SERVICE": {
+					"url": "angular-service/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ABSTRACTION": {
+					"url": "abstraction/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[API] Response ok: flow/create-entity"
+}
+[info] [API] Request for flow/create-entity: {
+	"action": "flow/create-entity",
+	"params": {},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "ZOxgr5BFFG",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for flow/create-entity"
+}
+[info] [CLI] Calling Query flow/create-entity: {
+	"funcParams": {},
+	"level": "info",
+	"message": "[CLI] Calling Query flow/create-entity"
+}
+[info] [CLI] Called Query flow/create-entity: {
+	"result": {
+		"context": {
+			"project": {
+				"name": "lowgular-course-entry",
+				"workspaceRoot": "/Users/nataliatrocha/Documents/lowgular-course-entry",
+				"root": "",
+				"sourceRoot": "src",
+				"prefix": "app",
+				"codePathFromWorkspaceRoot": "src/app",
+				"absoluteCodePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app",
+				"absoluteRootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry",
+				"rootRoutingFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/app-routing.module.ts",
+				"type": "App"
+			}
+		},
+		"steps": [
+			{
+				"contextId": "entity",
+				"title": "What do you want to create?",
+				"type": "multi-option",
+				"options": {
+					"App": [
+						{
+							"id": "component",
+							"suffix": "Component",
+							"folder": "ui/$name$",
+							"type": "ANGULAR_COMPONENT",
+							"insideOf": "App",
+							"config": {
+								"stylesExtension": "none",
+								"viewEncapsulation": "Emulated",
+								"selector": "generated",
+								"changeDetectionStrategy": "OnPush"
+							}
+						},
+						{
+							"id": "dataService",
+							"suffix": "Service",
+							"folder": "services",
+							"type": "ANGULAR_SERVICE",
+							"insideOf": "App"
+						},
+						{
+							"id": "model",
+							"suffix": "Model",
+							"folder": "model",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						},
+						{
+							"id": "response",
+							"suffix": "Response",
+							"folder": "services",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						}
+					],
+					"Lib": []
+				},
+				"param": "project.type",
+				"property": "id"
+			},
+			{
+				"contextId": "name",
+				"title": "What is the $entity.id$ name?",
+				"subtitle": "e.g. user",
+				"type": "text-input"
+			},
+			{
+				"conditions": [
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "DATA_STRUCTURE"
+					},
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "OBJECT"
+					}
+				],
+				"contextId": "properties",
+				"title": "What are the $entity.id$ properties?",
+				"subtitle": "Optional: Can be empty... or use csv format e.g. id:number,text:string",
+				"type": "multi-input"
+			}
+		],
+		"request": {
+			"scope": "entity.type",
+			"config": {
+				"LIBRARY": {
+					"url": "library/create",
+					"payload": {
+						"name": "name.value"
+					}
+				},
+				"OBJECT": {
+					"url": "object/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"DATA_STRUCTURE": {
+					"url": "data-structure/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_COMPONENT": {
+					"url": "angular-component/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_DIRECTIVE": {
+					"url": "angular-directive/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_GUARD": {
+					"url": "angular-guard/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_RESOLVER": {
+					"url": "angular-resolver/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_SERVICE": {
+					"url": "angular-service/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ABSTRACTION": {
+					"url": "abstraction/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query flow/create-entity"
+}
+[info] [API] Response ok: flow/create-entity: {
+	"result": {
+		"context": {
+			"project": {
+				"name": "lowgular-course-entry",
+				"workspaceRoot": "/Users/nataliatrocha/Documents/lowgular-course-entry",
+				"root": "",
+				"sourceRoot": "src",
+				"prefix": "app",
+				"codePathFromWorkspaceRoot": "src/app",
+				"absoluteCodePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app",
+				"absoluteRootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry",
+				"rootRoutingFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/app-routing.module.ts",
+				"type": "App"
+			}
+		},
+		"steps": [
+			{
+				"contextId": "entity",
+				"title": "What do you want to create?",
+				"type": "multi-option",
+				"options": {
+					"App": [
+						{
+							"id": "component",
+							"suffix": "Component",
+							"folder": "ui/$name$",
+							"type": "ANGULAR_COMPONENT",
+							"insideOf": "App",
+							"config": {
+								"stylesExtension": "none",
+								"viewEncapsulation": "Emulated",
+								"selector": "generated",
+								"changeDetectionStrategy": "OnPush"
+							}
+						},
+						{
+							"id": "dataService",
+							"suffix": "Service",
+							"folder": "services",
+							"type": "ANGULAR_SERVICE",
+							"insideOf": "App"
+						},
+						{
+							"id": "model",
+							"suffix": "Model",
+							"folder": "model",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						},
+						{
+							"id": "response",
+							"suffix": "Response",
+							"folder": "services",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						}
+					],
+					"Lib": []
+				},
+				"param": "project.type",
+				"property": "id"
+			},
+			{
+				"contextId": "name",
+				"title": "What is the $entity.id$ name?",
+				"subtitle": "e.g. user",
+				"type": "text-input"
+			},
+			{
+				"conditions": [
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "DATA_STRUCTURE"
+					},
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "OBJECT"
+					}
+				],
+				"contextId": "properties",
+				"title": "What are the $entity.id$ properties?",
+				"subtitle": "Optional: Can be empty... or use csv format e.g. id:number,text:string",
+				"type": "multi-input"
+			}
+		],
+		"request": {
+			"scope": "entity.type",
+			"config": {
+				"LIBRARY": {
+					"url": "library/create",
+					"payload": {
+						"name": "name.value"
+					}
+				},
+				"OBJECT": {
+					"url": "object/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"DATA_STRUCTURE": {
+					"url": "data-structure/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_COMPONENT": {
+					"url": "angular-component/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_DIRECTIVE": {
+					"url": "angular-directive/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_GUARD": {
+					"url": "angular-guard/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_RESOLVER": {
+					"url": "angular-resolver/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_SERVICE": {
+					"url": "angular-service/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ABSTRACTION": {
+					"url": "abstraction/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[API] Response ok: flow/create-entity"
+}
+[info] [API] Request for flow/create-entity: {
+	"action": "flow/create-entity",
+	"params": {},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "hj8Av5ky4N",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for flow/create-entity"
+}
+[info] [CLI] Calling Query flow/create-entity: {
+	"funcParams": {},
+	"level": "info",
+	"message": "[CLI] Calling Query flow/create-entity"
+}
+[info] [CLI] Called Query flow/create-entity: {
+	"result": {
+		"context": {
+			"project": {
+				"name": "lowgular-course-entry",
+				"workspaceRoot": "/Users/nataliatrocha/Documents/lowgular-course-entry",
+				"root": "",
+				"sourceRoot": "src",
+				"prefix": "app",
+				"codePathFromWorkspaceRoot": "src/app",
+				"absoluteCodePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app",
+				"absoluteRootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry",
+				"rootRoutingFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/app-routing.module.ts",
+				"type": "App"
+			}
+		},
+		"steps": [
+			{
+				"contextId": "entity",
+				"title": "What do you want to create?",
+				"type": "multi-option",
+				"options": {
+					"App": [
+						{
+							"id": "component",
+							"suffix": "Component",
+							"folder": "ui/$name$",
+							"type": "ANGULAR_COMPONENT",
+							"insideOf": "App",
+							"config": {
+								"stylesExtension": "none",
+								"viewEncapsulation": "Emulated",
+								"selector": "generated",
+								"changeDetectionStrategy": "OnPush"
+							}
+						},
+						{
+							"id": "dataService",
+							"suffix": "Service",
+							"folder": "services",
+							"type": "ANGULAR_SERVICE",
+							"insideOf": "App"
+						},
+						{
+							"id": "model",
+							"suffix": "Model",
+							"folder": "model",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						},
+						{
+							"id": "response",
+							"suffix": "Response",
+							"folder": "services",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						}
+					],
+					"Lib": []
+				},
+				"param": "project.type",
+				"property": "id"
+			},
+			{
+				"contextId": "name",
+				"title": "What is the $entity.id$ name?",
+				"subtitle": "e.g. user",
+				"type": "text-input"
+			},
+			{
+				"conditions": [
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "DATA_STRUCTURE"
+					},
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "OBJECT"
+					}
+				],
+				"contextId": "properties",
+				"title": "What are the $entity.id$ properties?",
+				"subtitle": "Optional: Can be empty... or use csv format e.g. id:number,text:string",
+				"type": "multi-input"
+			}
+		],
+		"request": {
+			"scope": "entity.type",
+			"config": {
+				"LIBRARY": {
+					"url": "library/create",
+					"payload": {
+						"name": "name.value"
+					}
+				},
+				"OBJECT": {
+					"url": "object/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"DATA_STRUCTURE": {
+					"url": "data-structure/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_COMPONENT": {
+					"url": "angular-component/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_DIRECTIVE": {
+					"url": "angular-directive/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_GUARD": {
+					"url": "angular-guard/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_RESOLVER": {
+					"url": "angular-resolver/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_SERVICE": {
+					"url": "angular-service/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ABSTRACTION": {
+					"url": "abstraction/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[CLI] Called Query flow/create-entity"
+}
+[info] [API] Response ok: flow/create-entity: {
+	"result": {
+		"context": {
+			"project": {
+				"name": "lowgular-course-entry",
+				"workspaceRoot": "/Users/nataliatrocha/Documents/lowgular-course-entry",
+				"root": "",
+				"sourceRoot": "src",
+				"prefix": "app",
+				"codePathFromWorkspaceRoot": "src/app",
+				"absoluteCodePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app",
+				"absoluteRootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry",
+				"rootRoutingFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/app-routing.module.ts",
+				"type": "App"
+			}
+		},
+		"steps": [
+			{
+				"contextId": "entity",
+				"title": "What do you want to create?",
+				"type": "multi-option",
+				"options": {
+					"App": [
+						{
+							"id": "component",
+							"suffix": "Component",
+							"folder": "ui/$name$",
+							"type": "ANGULAR_COMPONENT",
+							"insideOf": "App",
+							"config": {
+								"stylesExtension": "none",
+								"viewEncapsulation": "Emulated",
+								"selector": "generated",
+								"changeDetectionStrategy": "OnPush"
+							}
+						},
+						{
+							"id": "dataService",
+							"suffix": "Service",
+							"folder": "services",
+							"type": "ANGULAR_SERVICE",
+							"insideOf": "App"
+						},
+						{
+							"id": "model",
+							"suffix": "Model",
+							"folder": "model",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						},
+						{
+							"id": "response",
+							"suffix": "Response",
+							"folder": "services",
+							"type": "DATA_STRUCTURE",
+							"insideOf": "App"
+						}
+					],
+					"Lib": []
+				},
+				"param": "project.type",
+				"property": "id"
+			},
+			{
+				"contextId": "name",
+				"title": "What is the $entity.id$ name?",
+				"subtitle": "e.g. user",
+				"type": "text-input"
+			},
+			{
+				"conditions": [
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "DATA_STRUCTURE"
+					},
+					{
+						"left": "entity.type",
+						"operator": "eq",
+						"right": "OBJECT"
+					}
+				],
+				"contextId": "properties",
+				"title": "What are the $entity.id$ properties?",
+				"subtitle": "Optional: Can be empty... or use csv format e.g. id:number,text:string",
+				"type": "multi-input"
+			}
+		],
+		"request": {
+			"scope": "entity.type",
+			"config": {
+				"LIBRARY": {
+					"url": "library/create",
+					"payload": {
+						"name": "name.value"
+					}
+				},
+				"OBJECT": {
+					"url": "object/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"DATA_STRUCTURE": {
+					"url": "data-structure/create",
+					"payload": {
+						"name": "name.value",
+						"properties": "properties",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_COMPONENT": {
+					"url": "angular-component/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_DIRECTIVE": {
+					"url": "angular-directive/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_GUARD": {
+					"url": "angular-guard/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_RESOLVER": {
+					"url": "angular-resolver/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ANGULAR_SERVICE": {
+					"url": "angular-service/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				},
+				"ABSTRACTION": {
+					"url": "abstraction/create",
+					"payload": {
+						"name": "name.value",
+						"entityId": "entity.id"
+					}
+				}
+			}
+		}
+	},
+	"level": "info",
+	"message": "[API] Response ok: flow/create-entity"
+}
+[info] [API] Request for angular-component/create: {
+	"action": "angular-component/create",
+	"params": {
+		"name": "employees-faces",
+		"entityId": "component"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "hj8Av5ky4N",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for angular-component/create"
+}
+[info] [CLI] Calling Command angular-component/create: {
+	"funcParams": {
+		"name": "employees-faces",
+		"entityId": "component"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command angular-component/create"
+}
+[info] [CommandBus]: Dispatching command COMPONENT_CREATE_SMART_COMPONENT: {
+	"commandName": "COMPONENT_CREATE_SMART_COMPONENT",
+	"payload": {
+		"name": "employees-faces",
+		"prefix": "app",
+		"suffix": "Component",
+		"absoluteFolderPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces",
+		"config": {
+			"stylesExtension": "none",
+			"viewEncapsulation": "Emulated",
+			"selector": "generated",
+			"changeDetectionStrategy": "OnPush"
+		}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command COMPONENT_CREATE_SMART_COMPONENT"
+}
+[warn] [TsMorphFileAdapter]: File Not Found, creating...: {
+	"filePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.html",
+	"level": "warn",
+	"message": "[TsMorphFileAdapter]: File Not Found, creating..."
+}
+[info] [EventBus]: Broadcasting event COMPONENT_SMART_COMPONENT_CREATED: {
+	"type": "COMPONENT_SMART_COMPONENT_CREATED",
+	"payload": {
+		"createdFile": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event COMPONENT_SMART_COMPONENT_CREATED"
+}
+[info] [CommandBus]: Dispatching command CREATE_COMPONENT_MODULE: {
+	"commandName": "CREATE_COMPONENT_MODULE",
+	"payload": {
+		"moduleFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component-module.ts"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command CREATE_COMPONENT_MODULE"
+}
+[info] [EventBus]: Broadcasted COMPONENT_SMART_COMPONENT_CREATED: {
+	"event": {
+		"createdFile": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted COMPONENT_SMART_COMPONENT_CREATED"
+}
+[info] [EventBus]: Broadcasting event MODULE_MODULE_CREATED: {
+	"type": "MODULE_MODULE_CREATED",
+	"payload": {
+		"moduleFile": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component-module.ts"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasting event MODULE_MODULE_CREATED"
+}
+[info] [EventBus]: Broadcasted MODULE_MODULE_CREATED: {
+	"event": {
+		"moduleFile": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component-module.ts"
+	},
+	"level": "info",
+	"message": "[EventBus]: Broadcasted MODULE_MODULE_CREATED"
+}
+[info] [CommandBus]: Handled  CREATE_COMPONENT_MODULE: {
+	"commandName": "CREATE_COMPONENT_MODULE",
+	"payload": {
+		"moduleFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component-module.ts"
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  CREATE_COMPONENT_MODULE"
+}
+[info] [CommandBus]: Handled  COMPONENT_CREATE_SMART_COMPONENT: {
+	"commandName": "COMPONENT_CREATE_SMART_COMPONENT",
+	"payload": {
+		"name": "employees-faces",
+		"prefix": "app",
+		"suffix": "Component",
+		"absoluteFolderPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces",
+		"config": {
+			"stylesExtension": "none",
+			"viewEncapsulation": "Emulated",
+			"selector": "generated",
+			"changeDetectionStrategy": "OnPush"
+		}
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  COMPONENT_CREATE_SMART_COMPONENT"
+}
+[info] [CLI] Called Command angular-component/create: {
+	"message": "[CLI] Called Command angular-component/create",
+	"level": "info"
+}
+[info] [API] Response ok: angular-component/create: {
+	"result": {
+		"filePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts"
+	},
+	"level": "info",
+	"message": "[API] Response ok: angular-component/create"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"position": 323
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "-jmdSnMx3n",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"position": 323
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeesFacesComponent"
+		},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeesFacesComponent"
+		},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [API] Request for injectable/list: {
+	"action": "injectable/list",
+	"params": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "-jmdSnMx3n",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for injectable/list"
+}
+[info] [CLI] Calling Query injectable/list: {
+	"funcParams": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query injectable/list"
+}
+[info] [CLI] Called Query injectable/list: {
+	"result": [
+		{
+			"id": "httpClient",
+			"dataType": "External",
+			"name": "HttpClient",
+			"relatedTypes": {}
+		},
+		{
+			"id": "activatedRoute",
+			"dataType": "External",
+			"name": "ActivatedRoute",
+			"relatedTypes": {}
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query injectable/list"
+}
+[info] [API] Response ok: injectable/list: {
+	"result": [
+		{
+			"id": "httpClient",
+			"dataType": "External",
+			"name": "HttpClient",
+			"relatedTypes": {}
+		},
+		{
+			"id": "activatedRoute",
+			"dataType": "External",
+			"name": "ActivatedRoute",
+			"relatedTypes": {}
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: injectable/list"
+}
+[info] [API] Request for injectable/inject-external: {
+	"action": "injectable/inject-external",
+	"params": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"externalId": "httpClient"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "-jmdSnMx3n",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for injectable/inject-external"
+}
+[info] [CLI] Calling Command injectable/inject-external: {
+	"funcParams": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"externalId": "httpClient"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command injectable/inject-external"
+}
+[error] [API]: Error Expected to find a type node.: {
+	"loggerData": {
+		"action": "injectable/inject-external",
+		"params": {
+			"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"externalId": "httpClient"
+		},
+		"context": {
+			"workspace": {
+				"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+			},
+			"userContext": {
+				"id": "ep15HiJKT2",
+				"correlationId": "-jmdSnMx3n",
+				"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+				"logEnvId": "development"
+			}
+		}
+	},
+	"error": {},
+	"stack": "Error: Expected to find a type node.\n    at Object.throwIfNullOrUndefined (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/@ts-morph/common/dist/ts-morph-common.js:473:19)\n    at ParameterDeclaration.getTypeNodeOrThrow (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:10058:34)\n    at /Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:9791:18\n    at Array.map (<anonymous>)\n    at makeConstructor (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:9789:60)\n    at injectExternalDependencyCommandHandler (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:11138:59)\n    at async dispatchCommand (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:8488:26)\n    at async callCommandCli (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:8532:20)\n    at async callHandler (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:16678:27)",
+	"level": "error",
+	"message": "[API]: Error Expected to find a type node."
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"position": 414
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "JyTv5-dP3M",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"position": 414
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeesFacesComponent"
+		},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"label": "data$",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Property",
+								"callPath": [
+									"data$"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Property Side Effect",
+								"callPath": [
+									"data$"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeesFacesComponent"
+		},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"label": "data$",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Property",
+								"callPath": [
+									"data$"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Property Side Effect",
+								"callPath": [
+									"data$"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [API] Request for injectable/list: {
+	"action": "injectable/list",
+	"params": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "JyTv5-dP3M",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for injectable/list"
+}
+[info] [CLI] Calling Query injectable/list: {
+	"funcParams": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query injectable/list"
+}
+[info] [CLI] Called Query injectable/list: {
+	"result": [
+		{
+			"id": "httpClient",
+			"dataType": "External",
+			"name": "HttpClient",
+			"relatedTypes": {}
+		},
+		{
+			"id": "activatedRoute",
+			"dataType": "External",
+			"name": "ActivatedRoute",
+			"relatedTypes": {}
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query injectable/list"
+}
+[info] [API] Response ok: injectable/list: {
+	"result": [
+		{
+			"id": "httpClient",
+			"dataType": "External",
+			"name": "HttpClient",
+			"relatedTypes": {}
+		},
+		{
+			"id": "activatedRoute",
+			"dataType": "External",
+			"name": "ActivatedRoute",
+			"relatedTypes": {}
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: injectable/list"
+}
+[info] [API] Request for injectable/inject-external: {
+	"action": "injectable/inject-external",
+	"params": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"externalId": "httpClient"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "JyTv5-dP3M",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for injectable/inject-external"
+}
+[info] [CLI] Calling Command injectable/inject-external: {
+	"funcParams": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"externalId": "httpClient"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command injectable/inject-external"
+}
+[error] [API]: Error Manipulation error: A syntax error was inserted.
+
+[96mUsers/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts[0m:[93m14[0m:[93m17[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m14[0m   constructor() {
+[7m  [0m [91m                ~[0m
+[96mUsers/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts[0m:[93m16[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m16[0m }
+[7m  [0m [91m~[0m
+
+Error replacing tree: The children of the old and new trees were expected to have the same count (5:6).
+
+-- Details --
+Path: /Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts
+Text: "...OnPush\n})\nexport class EmployeesFacesComponent {\n  data$: Observable<EmployeeModel[] | null> = this.\n\n  constructor() {\n  }\n}\n"
+Stack: Error: Error replacing tree: The children of the old and new trees were expected to have the same count (5:6).
+    at ParentFinderReplacementNodeHandler.handleChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1438:19)
+    at ParentFinderReplacementNodeHandler.handleNode (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1432:18)
+    at ParentFinderReplacementNodeHandler.handleNode (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1572:19)
+    at doManipulation (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2284:21)
+    at insertIntoBracesOrSourceFile (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2488:5)
+    at insertIntoBracesOrSourceFileWithGetChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2519:5)
+    at insertChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14429:12)
+    at ClassDeclaration.insertConstructors (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14055:20)
+    at ClassDeclaration.insertConstructor (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14051:25)
+    at addConstructorParams (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:9674:30): {
+	"loggerData": {
+		"action": "injectable/inject-external",
+		"params": {
+			"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"externalId": "httpClient"
+		},
+		"context": {
+			"workspace": {
+				"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+			},
+			"userContext": {
+				"id": "ep15HiJKT2",
+				"correlationId": "JyTv5-dP3M",
+				"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+				"logEnvId": "development"
+			}
+		}
+	},
+	"error": {
+		"filePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"oldText": "import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';\nimport {Observable} from \"rxjs\";\nimport {EmployeeModel} from \"../../model/employee.model\";\n\n@Component({\n  selector: 'app-employees-faces',\n  templateUrl: './employees-faces.component.html',\n  encapsulation: ViewEncapsulation.Emulated,\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class EmployeesFacesComponent {\n  data$: Observable<EmployeeModel[] | null> = this.\n}\n",
+		"newText": "import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';\nimport {Observable} from \"rxjs\";\nimport {EmployeeModel} from \"../../model/employee.model\";\n\n@Component({\n  selector: 'app-employees-faces',\n  templateUrl: './employees-faces.component.html',\n  encapsulation: ViewEncapsulation.Emulated,\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class EmployeesFacesComponent {\n  data$: Observable<EmployeeModel[] | null> = this.\n\n  constructor() {\n  }\n}\n"
+	},
+	"stack": "Error: Manipulation error: A syntax error was inserted.\n\n\u001b[96mUsers/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts\u001b[0m:\u001b[93m14\u001b[0m:\u001b[93m17\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1005: \u001b[0m';' expected.\n\n\u001b[7m14\u001b[0m   constructor() {\n\u001b[7m  \u001b[0m \u001b[91m                ~\u001b[0m\n\u001b[96mUsers/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts\u001b[0m:\u001b[93m16\u001b[0m:\u001b[93m1\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1128: \u001b[0mDeclaration or statement expected.\n\n\u001b[7m16\u001b[0m }\n\u001b[7m  \u001b[0m \u001b[91m~\u001b[0m\n\nError replacing tree: The children of the old and new trees were expected to have the same count (5:6).\n\n-- Details --\nPath: /Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts\nText: \"...OnPush\\n})\\nexport class EmployeesFacesComponent {\\n  data$: Observable<EmployeeModel[] | null> = this.\\n\\n  constructor() {\\n  }\\n}\\n\"\nStack: Error: Error replacing tree: The children of the old and new trees were expected to have the same count (5:6).\n    at ParentFinderReplacementNodeHandler.handleChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1438:19)\n    at ParentFinderReplacementNodeHandler.handleNode (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1432:18)\n    at ParentFinderReplacementNodeHandler.handleNode (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1572:19)\n    at doManipulation (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2284:21)\n    at insertIntoBracesOrSourceFile (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2488:5)\n    at insertIntoBracesOrSourceFileWithGetChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2519:5)\n    at insertChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14429:12)\n    at ClassDeclaration.insertConstructors (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14055:20)\n    at ClassDeclaration.insertConstructor (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14051:25)\n    at addConstructorParams (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:9674:30)\n    at throwError (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2300:19)\n    at doManipulation (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2294:13)\n    at insertIntoBracesOrSourceFile (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2488:5)\n    at insertIntoBracesOrSourceFileWithGetChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2519:5)\n    at insertChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14429:12)\n    at ClassDeclaration.insertConstructors (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14055:20)\n    at ClassDeclaration.insertConstructor (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14051:25)\n    at addConstructorParams (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:9674:30)\n    at injectExternalDependencyCommandHandler (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:11148:48)\n    at async dispatchCommand (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:8488:26)",
+	"level": "error",
+	"message": "[API]: Error Manipulation error: A syntax error was inserted.\n\n\u001b[96mUsers/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts\u001b[0m:\u001b[93m14\u001b[0m:\u001b[93m17\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1005: \u001b[0m';' expected.\n\n\u001b[7m14\u001b[0m   constructor() {\n\u001b[7m  \u001b[0m \u001b[91m                ~\u001b[0m\n\u001b[96mUsers/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts\u001b[0m:\u001b[93m16\u001b[0m:\u001b[93m1\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1128: \u001b[0mDeclaration or statement expected.\n\n\u001b[7m16\u001b[0m }\n\u001b[7m  \u001b[0m \u001b[91m~\u001b[0m\n\nError replacing tree: The children of the old and new trees were expected to have the same count (5:6).\n\n-- Details --\nPath: /Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts\nText: \"...OnPush\\n})\\nexport class EmployeesFacesComponent {\\n  data$: Observable<EmployeeModel[] | null> = this.\\n\\n  constructor() {\\n  }\\n}\\n\"\nStack: Error: Error replacing tree: The children of the old and new trees were expected to have the same count (5:6).\n    at ParentFinderReplacementNodeHandler.handleChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1438:19)\n    at ParentFinderReplacementNodeHandler.handleNode (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1432:18)\n    at ParentFinderReplacementNodeHandler.handleNode (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1572:19)\n    at doManipulation (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2284:21)\n    at insertIntoBracesOrSourceFile (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2488:5)\n    at insertIntoBracesOrSourceFileWithGetChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2519:5)\n    at insertChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14429:12)\n    at ClassDeclaration.insertConstructors (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14055:20)\n    at ClassDeclaration.insertConstructor (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14051:25)\n    at addConstructorParams (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:9674:30)"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"position": 414
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "3zdWTIN3a-",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"position": 414
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeesFacesComponent"
+		},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"label": "data$",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Property",
+								"callPath": [
+									"data$"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Property Side Effect",
+								"callPath": [
+									"data$"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeesFacesComponent"
+		},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"label": "data$",
+						"children": [
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_MAP",
+								"label": "Map Property",
+								"callPath": [
+									"data$"
+								]
+							},
+							{
+								"actionId": "RXJS_CALL_EXPRESSIONS_TAP",
+								"label": "Property Side Effect",
+								"callPath": [
+									"data$"
+								]
+							}
+						]
+					},
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for injectable/list: {
+	"action": "injectable/list",
+	"params": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "3zdWTIN3a-",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for injectable/list"
+}
+[info] [CLI] Calling Query injectable/list: {
+	"funcParams": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query injectable/list"
+}
+[info] [CLI] Called Query injectable/list: {
+	"result": [
+		{
+			"id": "httpClient",
+			"dataType": "External",
+			"name": "HttpClient",
+			"relatedTypes": {}
+		},
+		{
+			"id": "activatedRoute",
+			"dataType": "External",
+			"name": "ActivatedRoute",
+			"relatedTypes": {}
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query injectable/list"
+}
+[info] [API] Response ok: injectable/list: {
+	"result": [
+		{
+			"id": "httpClient",
+			"dataType": "External",
+			"name": "HttpClient",
+			"relatedTypes": {}
+		},
+		{
+			"id": "activatedRoute",
+			"dataType": "External",
+			"name": "ActivatedRoute",
+			"relatedTypes": {}
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: injectable/list"
+}
+[info] [API] Request for injectable/inject-external: {
+	"action": "injectable/inject-external",
+	"params": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"externalId": "httpClient"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "3zdWTIN3a-",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for injectable/inject-external"
+}
+[info] [CLI] Calling Command injectable/inject-external: {
+	"funcParams": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"externalId": "httpClient"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command injectable/inject-external"
+}
+[error] [API]: Error Manipulation error: A syntax error was inserted.
+
+[96mUsers/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts[0m:[93m14[0m:[93m17[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m14[0m   constructor() {
+[7m  [0m [91m                ~[0m
+[96mUsers/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts[0m:[93m16[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m16[0m }
+[7m  [0m [91m~[0m
+
+Error replacing tree: The children of the old and new trees were expected to have the same count (5:6).
+
+-- Details --
+Path: /Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts
+Text: "...OnPush\n})\nexport class EmployeesFacesComponent {\n  data$: Observable<EmployeeModel[] | null> = this.\n\n  constructor() {\n  }\n}\n"
+Stack: Error: Error replacing tree: The children of the old and new trees were expected to have the same count (5:6).
+    at ParentFinderReplacementNodeHandler.handleChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1438:19)
+    at ParentFinderReplacementNodeHandler.handleNode (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1432:18)
+    at ParentFinderReplacementNodeHandler.handleNode (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1572:19)
+    at doManipulation (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2284:21)
+    at insertIntoBracesOrSourceFile (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2488:5)
+    at insertIntoBracesOrSourceFileWithGetChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2519:5)
+    at insertChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14429:12)
+    at ClassDeclaration.insertConstructors (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14055:20)
+    at ClassDeclaration.insertConstructor (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14051:25)
+    at addConstructorParams (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:9674:30): {
+	"loggerData": {
+		"action": "injectable/inject-external",
+		"params": {
+			"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"externalId": "httpClient"
+		},
+		"context": {
+			"workspace": {
+				"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+			},
+			"userContext": {
+				"id": "ep15HiJKT2",
+				"correlationId": "3zdWTIN3a-",
+				"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+				"logEnvId": "development"
+			}
+		}
+	},
+	"error": {
+		"filePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"oldText": "import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';\nimport {Observable} from \"rxjs\";\nimport {EmployeeModel} from \"../../model/employee.model\";\n\n@Component({\n  selector: 'app-employees-faces',\n  templateUrl: './employees-faces.component.html',\n  encapsulation: ViewEncapsulation.Emulated,\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class EmployeesFacesComponent {\n  data$: Observable<EmployeeModel[] | null> = this.\n}\n",
+		"newText": "import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';\nimport {Observable} from \"rxjs\";\nimport {EmployeeModel} from \"../../model/employee.model\";\n\n@Component({\n  selector: 'app-employees-faces',\n  templateUrl: './employees-faces.component.html',\n  encapsulation: ViewEncapsulation.Emulated,\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class EmployeesFacesComponent {\n  data$: Observable<EmployeeModel[] | null> = this.\n\n  constructor() {\n  }\n}\n"
+	},
+	"stack": "Error: Manipulation error: A syntax error was inserted.\n\n\u001b[96mUsers/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts\u001b[0m:\u001b[93m14\u001b[0m:\u001b[93m17\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1005: \u001b[0m';' expected.\n\n\u001b[7m14\u001b[0m   constructor() {\n\u001b[7m  \u001b[0m \u001b[91m                ~\u001b[0m\n\u001b[96mUsers/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts\u001b[0m:\u001b[93m16\u001b[0m:\u001b[93m1\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1128: \u001b[0mDeclaration or statement expected.\n\n\u001b[7m16\u001b[0m }\n\u001b[7m  \u001b[0m \u001b[91m~\u001b[0m\n\nError replacing tree: The children of the old and new trees were expected to have the same count (5:6).\n\n-- Details --\nPath: /Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts\nText: \"...OnPush\\n})\\nexport class EmployeesFacesComponent {\\n  data$: Observable<EmployeeModel[] | null> = this.\\n\\n  constructor() {\\n  }\\n}\\n\"\nStack: Error: Error replacing tree: The children of the old and new trees were expected to have the same count (5:6).\n    at ParentFinderReplacementNodeHandler.handleChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1438:19)\n    at ParentFinderReplacementNodeHandler.handleNode (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1432:18)\n    at ParentFinderReplacementNodeHandler.handleNode (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1572:19)\n    at doManipulation (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2284:21)\n    at insertIntoBracesOrSourceFile (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2488:5)\n    at insertIntoBracesOrSourceFileWithGetChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2519:5)\n    at insertChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14429:12)\n    at ClassDeclaration.insertConstructors (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14055:20)\n    at ClassDeclaration.insertConstructor (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14051:25)\n    at addConstructorParams (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:9674:30)\n    at throwError (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2300:19)\n    at doManipulation (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2294:13)\n    at insertIntoBracesOrSourceFile (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2488:5)\n    at insertIntoBracesOrSourceFileWithGetChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2519:5)\n    at insertChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14429:12)\n    at ClassDeclaration.insertConstructors (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14055:20)\n    at ClassDeclaration.insertConstructor (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14051:25)\n    at addConstructorParams (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:9674:30)\n    at injectExternalDependencyCommandHandler (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:11148:48)\n    at async dispatchCommand (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:8488:26)",
+	"level": "error",
+	"message": "[API]: Error Manipulation error: A syntax error was inserted.\n\n\u001b[96mUsers/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts\u001b[0m:\u001b[93m14\u001b[0m:\u001b[93m17\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1005: \u001b[0m';' expected.\n\n\u001b[7m14\u001b[0m   constructor() {\n\u001b[7m  \u001b[0m \u001b[91m                ~\u001b[0m\n\u001b[96mUsers/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts\u001b[0m:\u001b[93m16\u001b[0m:\u001b[93m1\u001b[0m - \u001b[91merror\u001b[0m\u001b[90m TS1128: \u001b[0mDeclaration or statement expected.\n\n\u001b[7m16\u001b[0m }\n\u001b[7m  \u001b[0m \u001b[91m~\u001b[0m\n\nError replacing tree: The children of the old and new trees were expected to have the same count (5:6).\n\n-- Details --\nPath: /Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts\nText: \"...OnPush\\n})\\nexport class EmployeesFacesComponent {\\n  data$: Observable<EmployeeModel[] | null> = this.\\n\\n  constructor() {\\n  }\\n}\\n\"\nStack: Error: Error replacing tree: The children of the old and new trees were expected to have the same count (5:6).\n    at ParentFinderReplacementNodeHandler.handleChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1438:19)\n    at ParentFinderReplacementNodeHandler.handleNode (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1432:18)\n    at ParentFinderReplacementNodeHandler.handleNode (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:1572:19)\n    at doManipulation (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2284:21)\n    at insertIntoBracesOrSourceFile (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2488:5)\n    at insertIntoBracesOrSourceFileWithGetChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:2519:5)\n    at insertChildren (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14429:12)\n    at ClassDeclaration.insertConstructors (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14055:20)\n    at ClassDeclaration.insertConstructor (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/node_modules/ts-morph/dist/ts-morph.js:14051:25)\n    at addConstructorParams (/Users/nataliatrocha/Library/Application Support/JetBrains/WebStorm2022.2/plugins/LowgularJPlugin/cli/main.js:9674:30)"
+}
+[info] [API] Request for entity/actions: {
+	"action": "entity/actions",
+	"params": {
+		"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"position": 414
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "zaBLsqJJUE",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for entity/actions"
+}
+[info] [CLI] Calling Query entity/actions: {
+	"funcParams": {
+		"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"position": 414
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query entity/actions"
+}
+[info] [API] Response ok: entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeesFacesComponent"
+		},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[API] Response ok: entity/actions"
+}
+[info] [CLI] Called Query entity/actions: {
+	"result": {
+		"context": {
+			"parentClass": "EmployeesFacesComponent"
+		},
+		"children": [
+			{
+				"label": "Properties",
+				"children": [
+					{
+						"actionId": "ADD_FORM",
+						"label": "Create Form Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_CREATE",
+						"label": "Create Data Property",
+						"callPath": []
+					},
+					{
+						"actionId": "RXJS_PROPERTY_SUBJECT_CREATE",
+						"label": "Create Subject Property",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Inject",
+				"actionId": "INJECT",
+				"callPath": []
+			},
+			{
+				"label": "Methods",
+				"children": [
+					{
+						"actionId": "METHOD_CREATE",
+						"label": "Create New Method",
+						"callPath": []
+					}
+				]
+			},
+			{
+				"label": "Add Component to Route",
+				"actionId": "ADD_TO_ROUTE",
+				"callPath": []
+			}
+		]
+	},
+	"level": "info",
+	"message": "[CLI] Called Query entity/actions"
+}
+[info] [API] Request for injectable/list: {
+	"action": "injectable/list",
+	"params": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "zaBLsqJJUE",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for injectable/list"
+}
+[info] [CLI] Calling Query injectable/list: {
+	"funcParams": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Query injectable/list"
+}
+[info] [CLI] Called Query injectable/list: {
+	"result": [
+		{
+			"id": "httpClient",
+			"dataType": "External",
+			"name": "HttpClient",
+			"relatedTypes": {}
+		},
+		{
+			"id": "activatedRoute",
+			"dataType": "External",
+			"name": "ActivatedRoute",
+			"relatedTypes": {}
+		}
+	],
+	"level": "info",
+	"message": "[CLI] Called Query injectable/list"
+}
+[info] [API] Response ok: injectable/list: {
+	"result": [
+		{
+			"id": "httpClient",
+			"dataType": "External",
+			"name": "HttpClient",
+			"relatedTypes": {}
+		},
+		{
+			"id": "activatedRoute",
+			"dataType": "External",
+			"name": "ActivatedRoute",
+			"relatedTypes": {}
+		}
+	],
+	"level": "info",
+	"message": "[API] Response ok: injectable/list"
+}
+[info] [API] Request for injectable/inject-external: {
+	"action": "injectable/inject-external",
+	"params": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"externalId": "httpClient"
+	},
+	"context": {
+		"workspace": {
+			"rootPath": "/Users/nataliatrocha/Documents/lowgular-course-entry"
+		},
+		"userContext": {
+			"id": "ep15HiJKT2",
+			"correlationId": "zaBLsqJJUE",
+			"clickedPath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+			"logEnvId": "development"
+		}
+	},
+	"level": "info",
+	"message": "[API] Request for injectable/inject-external"
+}
+[info] [CLI] Calling Command injectable/inject-external: {
+	"funcParams": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"externalId": "httpClient"
+	},
+	"level": "info",
+	"message": "[CLI] Calling Command injectable/inject-external"
+}
+[info] [CommandBus]: Dispatching command INJECT_EXTERNAL_DEPENDENCY: {
+	"commandName": "INJECT_EXTERNAL_DEPENDENCY",
+	"payload": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"externalType": "HttpClient",
+		"genericFilePaths": []
+	},
+	"level": "info",
+	"message": "[CommandBus]: Dispatching command INJECT_EXTERNAL_DEPENDENCY"
+}
+[info] [CommandBus]: Handled  INJECT_EXTERNAL_DEPENDENCY: {
+	"commandName": "INJECT_EXTERNAL_DEPENDENCY",
+	"payload": {
+		"entityFilePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts",
+		"externalType": "HttpClient",
+		"genericFilePaths": []
+	},
+	"level": "info",
+	"message": "[CommandBus]: Handled  INJECT_EXTERNAL_DEPENDENCY"
+}
+[info] [CLI] Called Command injectable/inject-external: {
+	"message": "[CLI] Called Command injectable/inject-external",
+	"level": "info"
+}
+[info] [API] Response ok: injectable/inject-external: {
+	"result": {
+		"filePath": "/Users/nataliatrocha/Documents/lowgular-course-entry/src/app/ui/employees-faces/employees-faces.component.ts"
+	},
+	"level": "info",
+	"message": "[API] Response ok: injectable/inject-external"
+}
