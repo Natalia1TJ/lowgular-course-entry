@@ -21,7 +21,7 @@ export class EmployeeService {
              name: employeeResponse.employee_name,
              personalNumber: employeeResponse.id,
              img: employeeResponse.profile_image,
-             mail: ''
+             mail: employeeResponse.employee_name + '@lowgular.io',
            }
          })
        })
@@ -29,11 +29,11 @@ export class EmployeeService {
    }
 
   create(employee: CreateEmployeeModel): Observable<any> {
-    return this._httpClient.post('https://dummy.restapiexample.com/api/v1/create', employee);
+    return this._httpClient.post('https://dummy.restapiexample.com/api/v1/create', employee, {observe:'response'}).pipe();
   }
 
   delete(id: string): Observable<any> {
-    return this._httpClient.delete('https://dummy.restapiexample.com/public/api/v1/delete/' + id);
+    return this._httpClient.delete('https://dummy.restapiexample.com/public/api/v1/delete/' + id, {observe:'response'}).pipe();
   }
 
 }
